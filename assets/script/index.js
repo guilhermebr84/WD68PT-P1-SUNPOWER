@@ -1,7 +1,19 @@
-// all the games objects will be insert here
+// os objetos da vida real inseridos aqui
+// predios, casas, modulos fotovoltaicos, sol, raios de sol, relogio de consumo (vermelho consumo, verde geração)
+console.log('index.js tá rodando')
 
 
-// objects: sun, sunbeams, building, energy consumption, pv modules
+class PVinsertion {
+
+    constructor(xPos, yPos) {
+        this.xPos = xPos;
+        this.yPos= yPos;
+    }
+
+
+}
+
+
 
 const sun = 0
 const sunbeams = 0
@@ -17,5 +29,5 @@ const house1 = 0
 const house2 = 0
 const house3 = 0
 
-console.log('oi, eu sou o index.js')
+
 

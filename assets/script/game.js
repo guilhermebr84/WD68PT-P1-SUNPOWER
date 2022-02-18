@@ -1,11 +1,18 @@
-// all the game rules will be insert here
+// regras do jogo
 
-// roll scenarios, between urban and countryside (rural)
-// insert randoms energy consumptions (kWh.month) for each building and shows it, 
-// insert pv modules - insert more than one and it decrease the energy consumptions.
-// more of panels you insert, more the energy consumptions decrease and more energy is sent to the energy grid (red for consumptio, green for energy to grid)
+// cenarios
+// consumo de energia inicial por imovel
+// inserir os modulos fv e a cada um que é inserido o consumo de energia reduz
+// quanto mais modulo inserir, o valor de consumo reduz. Se negativar, aparecer uma mensagem "energia sendo injetada na rede" ou algo parecido
 
-function buildingCons (value) {
+console.log('game.js tá rodando')
+
+class Game {
+    constructor(){
+
+    }
+}
+function buildingsConsumption (value) {
 
 }
 
@@ -17,8 +24,7 @@ function deletePV (value) {
 
 }
 
-function decreaseCons (value) {
+function decreaseConsumptions (value) {
 
 }
 
-console.log('oi, eu sou o game.js')
