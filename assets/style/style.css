@@ -15,22 +15,25 @@ body {
 }
 
 .container-urban {
+  width: 600px;
+  height: auto;
+  border: 1px solid black;
+  margin: 30px auto;
+  background-color: grey;
   background: url("../../images/city.jpg");
-  margin: auto;
-  
-  height: max-content;
-  width: max-content;
 }
 
 .container-sub {
+  width: 600px;
+  height: auto;
+  border: 1px solid black;
+  margin: 30px auto;
   background: url("../../images/subh.jpg");
-  margin: auto;
- 
-  height: max-content;
-  width: max-content;
 }
 
 .pvmod {
   width: 25px;
   height: auto;
+  border: 1px solid black;
+  margin: 30px auto;
 }
