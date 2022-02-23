@@ -4,9 +4,8 @@
 // quanto mais modulo inserir, o valor de consumo reduz. Se negativar, aparecer uma mensagem "energia sendo injetada na rede" ou algo parecido
 
 console.log("game.js tá rodando");
-console.log("botão do index.js está aqui", btn2);
 
-const game = new SunPowerIt
+//const game = new SunPowerIt
 
 class SunPowerIt {
   // objetos - jogador e quantidade de modulo PV por area
@@ -25,7 +24,9 @@ class SunPowerIt {
     //se tentar inserir mais módulos que couber na área, inserir um alerta: window.alert(message);
   }
 
-  meterDecrease() {}
+  meterDecrease() {
+    countPVMod ++
+  }
 
   percentDecrease() {}
 

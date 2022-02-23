@@ -9,53 +9,56 @@ const btn4 = document.getElementById("btn4");
 const btn5 = document.getElementById("btn5");
 const btn6 = document.getElementById("btn6");
 
-let grid1 = 100;
-let grid2 = 100;
-let grid3 = 100;
-let grid4 = 100;
-let grid5 = 100;
-let grid6 = 100;
+let buildingCons1 = [3500, 100];
+let buildingCons2 = [4800, 100];
+let buildingCons3 = [3900, 100];
+let buildingCons4 = [800, 100];
+let buildingCons5 = [350, 100];
+let buildingCons6 = [1200, 100];
 
-let pvModulePower = 500;
+let meter1 = document.getElementById("m1");
+let meter2 = document.getElementById("m2");
+let meter3 = document.getElementById("m3");
+let meter4 = document.getElementById("m4");
+let meter5 = document.getElementById("m5");
+let meter6 = document.getElementById("m6");
 
-let buildingCons1 = 0;
-let buildingCons2 = 0;
-let buildingCons3 = 0;
-let buildingCons4 = 0;
-let buildingCons5 = 0;
-let buildingCons6 = 0;
+let pvModulePower1 = 500;
+let pvModulePower2 = 200;
 
-const pvArray1 = ["pv11", "pv12", "pv13", "pv14"];
-const pvArray2 = ["pv21", "pv22", "pv23"];
-const pvArray3 = ["pv31", "pv32", "pv33", "pv34", "pv35"];
-const pvArray4 = ["pv41", "pv42", "pv43", "pv44"];
-const pvArray5 = ["pv51", "pv52", "pv53"];
-const pvArray6 = ["pv61", "pv62"];
+const pvArray1 = ["pv11", "pv12", "pv13", "pv14"]; //pvModulePower1 = 500
+const pvArray2 = ["pv21", "pv22", "pv23"]; //pvModulePower1 = 500
+const pvArray3 = ["pv31", "pv32", "pv33", "pv34", "pv35"]; //pvModulePower1 = 500
+const pvArray4 = ["pv41", "pv42", "pv43", "pv44"]; //pvModulePower2 = 200;
+const pvArray5 = ["pv51", "pv52", "pv53"]; //pvModulePower2 = 200;
+const pvArray6 = ["pv61", "pv62"]; //pvModulePower2 = 200;
 
-function handleInsertBtn(insertPVMod) {
-  let countPV = 0;
-  let gridLess = 0;
+let countPVMod = 0;
+
+// retirar os ids do pvmod no index.html
+function handleInsertBtn() {
+  const pvModImage = document.createElement("img");
+  pvModImage.src = "./images/pvmod01.jpg";
+  const classImage = document.getElementsByClassName("pvmod-allign1");
+  console.log(classImage);
+  classImage.innerHTML = pvModImage;
 }
 
 // todos os botões do jogo, para cada área
 
 btn1.addEventListener("click", () => {
-  console.log("botão 1");
   handleInsertBtn();
 });
 
 btn2.addEventListener("click", () => {
-  console.log("botão 2");
   handleInsertBtn();
 });
 
 btn3.addEventListener("click", () => {
-  console.log("botão 3");
   handleInsertBtn();
 });
 
 btn4.addEventListener("click", () => {
-  console.log("botão 4");
   handleInsertBtn();
 });
 
