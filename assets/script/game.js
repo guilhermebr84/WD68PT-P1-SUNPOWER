@@ -1,39 +1,36 @@
 // regras do jogo
-
-// cenarios
 // consumo de energia inicial por imovel
 // inserir os modulos fv e a cada um que é inserido o consumo de energia reduz
 // quanto mais modulo inserir, o valor de consumo reduz. Se negativar, aparecer uma mensagem "energia sendo injetada na rede" ou algo parecido
 
+console.log("game.js tá rodando");
+console.log("botão do index.js está aqui", btn2);
 
+const game = new SunPowerIt
 
-console.log('game.js tá rodando')
+class SunPowerIt {
+  // objetos - jogador e quantidade de modulo PV por area
+  constructor() {
+    this.pvModArea1 = 0;
+    this.pvModArea2 = 0;
+    this.pvModArea3 = 0;
+    this.pvModArea4 = 0;
+    this.pvModArea5 = 0;
+    this.pvModArea6 = 0;
+  }
 
-class Game {
+  insertPVMod() {
+    this.pvModArea1 = 0;
 
-    // objetos - jogador, telhado e modulo PV
-    constructor(player, roof, pvMod){
-        this.player = player;
-        this.roof = roof;
-        this.pvMod = pvMod;
-    }
-    
-    checkPlayerSaves() {
-    if (this.player.energysave > 1000){
-        return `you save ${this.energysave} kwh.month`;
-    } 
-    }
+    //se tentar inserir mais módulos que couber na área, inserir um alerta: window.alert(message);
+  }
+
+  meterDecrease() {}
+
+  percentDecrease() {}
+
+  energySavingSum() {}
+
+  gameOver() {}
 }
 
-class Player {
-    constructor(name){
-        this.name = name;
-        this.win = ''
-    }
-
-    // insere o modulo PV sobre os locais indicados
-    setPV(insertPv){
-        this.insertPV = insertPV;
-        this.energySave = 0
-    }
-}

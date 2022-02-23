@@ -6,6 +6,8 @@ body {
   width: 100vw;
 }
 
+
+
 .container {
   position: relative;
   display: flex;
@@ -94,12 +96,25 @@ body {
 }
 
 .h1-title {
+  flex-direction: row;
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 700;
   font-size: 3rem;
-  padding: 1rem 1rem;
-  border: 3px solid black;
-  border-radius: 0%;
+  padding: 2rem 2rem;
+  border: none;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  margin: 0px;
+  padding: 0px;
+  top: 0px;
+  right: 0px;
+}
+
+.instructions {
+  width: 880px;
 }
 
 .container-urban {
@@ -142,9 +157,9 @@ body {
   position: relative;
 }
 
-.inserting p {
+/*.inserting p {
   margin: 0;
-}
+}*/
 
 .inserting {
   margin: 0;
@@ -195,6 +210,17 @@ body {
   margin: 0px;
 }
 
+.meter{
+  position: absolute;
+  top: 150px;
+  width: 150px;
+  height: 30px;
+}
+
+.consumptionInfo {
+  position: absolute;
+  top: 180px;
+}
 /* área somente dos botões */
 
 .btn1 {
@@ -222,9 +248,7 @@ body {
 }
 
 .consumptionInfo {
-  position: relative;
-  width: 150px;
-  height: 30px;
+  width: 100%;
   text-align: center;
   line-height: 30px;
   margin: 3px;
@@ -232,4 +256,8 @@ body {
   color: #fff;
   font-size: 12px;
   font-weight: 100;
+}
+
+.bold {
+  font-weight: bolder;
 }
