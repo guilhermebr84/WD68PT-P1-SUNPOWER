@@ -20,8 +20,7 @@ class Game {
     //se tentar inserir mais módulos que couber na área, inserir um alerta: window.alert(message);
   }
 
-  meterDecrease() {
-  }
+  meterDecrease() {}
 
   percentDecrease() {}
 
@@ -29,4 +28,3 @@ class Game {
 
   gameOver() {}
 }
-
