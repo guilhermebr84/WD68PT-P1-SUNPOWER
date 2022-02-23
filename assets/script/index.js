@@ -16,6 +16,15 @@ let grid4 = 100;
 let grid5 = 100;
 let grid6 = 100;
 
+let pvModulePower = 500;
+
+let buildingCons1 = 0;
+let buildingCons2 = 0;
+let buildingCons3 = 0;
+let buildingCons4 = 0;
+let buildingCons5 = 0;
+let buildingCons6 = 0;
+
 const pvArray1 = ["pv11", "pv12", "pv13", "pv14"];
 const pvArray2 = ["pv21", "pv22", "pv23"];
 const pvArray3 = ["pv31", "pv32", "pv33", "pv34", "pv35"];
