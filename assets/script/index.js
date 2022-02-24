@@ -2,7 +2,7 @@
 // predios, casas, modulos fotovoltaicos, sol, raios de sol, relogio de consumo (vermelho consumo, verde geração)
 console.log("index.js tá rodando");
 
-const game = new Game()
+// const game = new Game()
 
 const btn1 = document.getElementById("btn1");
 const btn2 = document.getElementById("btn2");
@@ -27,7 +27,7 @@ let meter4 = document.getElementById("m4");
 let meter5 = document.getElementById("m5");
 let meter6 = document.getElementById("m6");
 
-// esse é o valor nominal de painel (sem qualquer atribuição de unidade fisica) e a medida que clica e insere um painel, esse subtrai do valor de consumo do 
+// esse é o valor nominal de painel (sem qualquer atribuição de unidade fisica) e a medida que clica e insere um painel, esse subtrai do valor de consumo do
 let pvModulePower1 = 500;
 let pvModulePower2 = 200;
 
@@ -39,23 +39,46 @@ const pvQt4 = 4; //pvModulePower2 = 200;
 const pvQt5 = 3; //pvModulePower2 = 200;
 const pvQt6 = 2; //pvModulePower2 = 200;
 
-let countPVMod = 0;
+let countPVMod1 = -1;
+
+let consumptionPercent1 = document.getElementById("consumptionPercent1");
+console.log(consumptionPercent1);
+
+const pvmodList1 = document.querySelectorAll(".pvmod1");
+
+console.log(meter1);
 
 // retirar os ids do pvmod no index.html
-function handleInsertBtn() {
-  const pvModImage = document.createElement("img");
-  pvModImage.src = "./images/pvmod01.jpg";
-  const classImage = document.getElementsByClassName("pvmod-allign1");
-  console.log(classImage);  
-  classImage.innerHTML = pvModImage;
+function handleInsertBtn(pvmodList, countPVMod) {
+  // const pvModImage = document.createElement("img");
+  // pvModImage.src = "./images/pvmod01.jpg";
+  // const classImage = document.getElementsByClassName("pvmod-allign1");
+  // console.log(classImage);
+  // classImage.innerHTML = pvModImage;
+  //  for (let i = 0; i < pvQt; i ++ ) {  }
+
+  pvmodList[countPVMod].style.display = "inline";
+  console.log((pvmodList[countPVMod].style.display = "inline"));
 }
 
-//document.querySelector(‘.classe’).style.display = ‘’block’ (editado) 
+function meterDec(meter, pvQt, consumptionPercent) {
+  let meterDecrease = 100 / pvQt;
+  meter.value = meter.value - meterDecrease;
+  consumptionPercent.innerText = meter.value;
+}
+
+//document.querySelector(‘.classe’).style.display = ‘’block’ (editado)
 
 // todos os botões do jogo, para cada área
 
 btn1.addEventListener("click", () => {
-  handleInsertBtn();
+  countPVMod1++;
+  if (countPVMod1 < pvQt1) {
+    handleInsertBtn(pvmodList1, countPVMod1);
+    meterDec(meter1, pvQt1, consumptionPercent1);
+  } else {
+    window.alert("Number of Mods reach the max");
+  }
 });
 
 btn2.addEventListener("click", () => {
@@ -80,6 +103,4 @@ btn6.addEventListener("click", () => {
   handleInsertBtn();
 });
 
-function updateSavingInformation () {
-
-}
+function updateSavingInformation() {}

@@ -6,8 +6,6 @@ body {
   width: 100vw;
 }
 
-
-
 .container {
   position: relative;
   display: flex;
@@ -138,11 +136,13 @@ body {
   background-repeat: no-repeat;
 }
 
+.pvmod1,
 .pvmod {
   width: 25px;
   height: auto;
   border: 1px solid black;
   margin: auto;
+  display: none;
 }
 
 .grid-urban {
@@ -204,13 +204,10 @@ body {
 
 .pvmod-allign {
   align-items: flex-end;
+  margin-left: 70px;
 }
 
-.pvmod {
-  margin: 0px;
-}
-
-.meter{
+.meter {
   position: absolute;
   top: 150px;
   width: 150px;
