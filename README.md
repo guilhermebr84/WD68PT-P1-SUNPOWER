@@ -1,4 +1,4 @@
-# Sunpower it!
+# Sunpower it! V.1.0
 
 Install PV modules over buiding´s and houses´s roofs and reduce their energy bills.
 
