@@ -136,7 +136,13 @@ body {
   background-repeat: no-repeat;
 }
 
-.pvmod1, .pvmod2, .pvmod3, .pvmod4,.pvmod5, .pvmod6, .pvmod {
+.pvmod1,
+.pvmod2,
+.pvmod3,
+.pvmod4,
+.pvmod5,
+.pvmod6,
+.pvmod {
   width: 25px;
   height: auto;
   border: 1px solid black;
@@ -243,7 +249,7 @@ body {
   margin-bottom: 10px;
 }
 
-.btnRestart{
+.btnRestart {
   margin-bottom: 10px;
 }
 
