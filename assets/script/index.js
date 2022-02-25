@@ -73,7 +73,7 @@ function handleInsertBtn(pvmodList, countPVMod) {
 
 function meterDec(meter, pvQt, consumptionPercent) {
   let meterDecrease = 100 / pvQt;
-  meter.value = (meter.value - meterDecrease).toFixed(0);
+  meter.value = Math.floor((meter.value - meterDecrease).toFixed(0));
   consumptionPercent.innerText = meter.value;
 }
 
@@ -86,6 +86,7 @@ btn1.addEventListener("click", () => {
   if (countPVMod1 < pvQt1) {
     handleInsertBtn(pvmodList1, countPVMod1);
     meterDec(meter1, pvQt1, consumptionPercent1);
+    gameOver();
   } else {
     window.alert("Number of Mods reach the max for roof size");
   }
@@ -96,7 +97,7 @@ btn2.addEventListener("click", () => {
   if (countPVMod2 < pvQt2) {
     handleInsertBtn(pvmodList2, countPVMod2);
     meterDec(meter2, pvQt2, consumptionPercent2);
-    console.log(meter2.value);
+    gameOver();
   } else {
     window.alert("Number of Mods reach the max for roof size");
   }
@@ -107,7 +108,7 @@ btn3.addEventListener("click", () => {
   if (countPVMod3 < pvQt3) {
     handleInsertBtn(pvmodList3, countPVMod3);
     meterDec(meter3, pvQt3, consumptionPercent3);
-    console.log(meter3.value);
+    gameOver();
   } else {
     window.alert("Number of Mods reach the max for roof size");
   }
@@ -118,7 +119,7 @@ btn4.addEventListener("click", () => {
   if (countPVMod4 < pvQt4) {
     handleInsertBtn(pvmodList4, countPVMod4);
     meterDec(meter4, pvQt4, consumptionPercent4);
-    console.log(meter4.value);
+    gameOver();
   } else {
     window.alert("Number of Mods reach the max for roof size");
   }
@@ -129,7 +130,7 @@ btn5.addEventListener("click", () => {
   if (countPVMod5 < pvQt5) {
     handleInsertBtn(pvmodList5, countPVMod5);
     meterDec(meter5, pvQt5, consumptionPercent5);
-    console.log(meter5.value);
+    gameOver();
   } else {
     window.alert("Number of Mods reach the max for roof size");
   }
@@ -140,13 +141,11 @@ btn6.addEventListener("click", () => {
   if (countPVMod6 < pvQt6) {
     handleInsertBtn(pvmodList6, countPVMod6);
     meterDec(meter6, pvQt6, consumptionPercent6);
-    console.log(meter6.value);
+    gameOver();
   } else {
     window.alert("Number of Mods reach the max for roof size");
   }
 });
-
-console.log(meter1.value);
 
 function gameOver() {
   if (
@@ -167,9 +166,7 @@ function gameOver() {
     } kWh.month`;
     engGameMessage.style.display = "inline";
     energySaved.innerText = totalEnergySaved;
-  } else {
-    window.alert("Keep Playing!");
   }
 }
 
-gameOver();
+// gameOver();
