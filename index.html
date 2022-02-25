@@ -20,7 +20,7 @@
       <h1 class="h1-title"> <img class="logo" src="./images/XBR_logo_2.svg" /> SunPower it ! <img class="logo" src="./images/XBR_logo_2.svg" /> </h1>
       
       <p>
-        <h3 class="instructions">In the next scenarios you have to install the missing solar power system pressing the button "Insert PV Module" to increase energy self-generation and decrease energy comsuption</h3> 
+        <h3 class="instructions">In the next scenarios you have to install the solar power system pressing the button "Insert PV Module" to increase energy self-generation and decrease energy GRID CONSUMPTION</h3> 
         <h2>Solar Power for commercial buildings</h2>
       <div class="container-urban">
 
@@ -47,10 +47,12 @@
               <span>Insert PV Module</span>
             </a>
             <div class="pvmod-allign">
-              <img class="pvmod" src="./images/pvmod01.jpg" />
+              <img class="pvmod2" src="./images/pvmod01.jpg" />
+              <img class="pvmod2" src="./images/pvmod01.jpg" />
+              <img class="pvmod2" src="./images/pvmod01.jpg" />
             </div>
             <meter class="meter" id="m2" min="0" max="100" value="100"></meter>
-            <div class="consumptionInfo"><span id="consumptionPercent">100</span><span>% Grid Consumption</span></div>
+            <div class="consumptionInfo"><span id="consumptionPercent2">100</span><span>% Grid Consumption</span></div>
           </div>
 
           <div class="inserting pvarea3">
@@ -59,10 +61,14 @@
               <span>Insert PV Module</span>
                 </a>
             <div class="pvmod-allign">
-              <img  class="pvmod" src="./images/pvmod01.jpg" />
+              <img  class="pvmod3" src="./images/pvmod01.jpg" />
+              <img  class="pvmod3" src="./images/pvmod01.jpg" />
+              <img  class="pvmod3" src="./images/pvmod01.jpg" />
+              <img  class="pvmod3" src="./images/pvmod01.jpg" />
+              <img  class="pvmod3" src="./images/pvmod01.jpg" />
             </div>
             <meter class="meter" id="m3" min="0" max="100" value="100"></meter>
-            <div class="consumptionInfo"><span id="consumptionPercent">100</span><span>% Grid Consumption</span></div>
+            <div class="consumptionInfo"><span id="consumptionPercent3">100</span><span>% Grid Consumption</span></div>
           </div>
 
         </div>
@@ -76,39 +82,45 @@
         <div class="grid-sub">
 
           <div class="inserting pvarea4">
-            <a href="#" id="btn4">
+            <a id="btn4">
               <span class="btn4">Insert PV Module</span>
               <span>Insert PV Module</span>
             </a>
             <div class="pvmod-allign">
-            <img class="pvmod" src="./images/pvmod01.jpg" />
+            <img class="pvmod4" src="./images/pvmod01.jpg" />
+            <img class="pvmod4" src="./images/pvmod01.jpg" />
+            <img class="pvmod4" src="./images/pvmod01.jpg" />
+            <img class="pvmod4" src="./images/pvmod01.jpg" />
             </div>
           <meter class="meter" id="m4" min="0" max="100" value="100"></meter>
-          <div class="consumptionInfo"><span id="consumptionPercent">100</span><span>% Grid Consumption</span></div>
+          <div class="consumptionInfo"><span id="consumptionPercent4">100</span><span>% Grid Consumption</span></div>
           </div>
 
           <div class="inserting pvarea5">
-            <a href="#" id="btn5">
+            <a id="btn5">
               <span class="btn5">Insert PV Module</span>
               <span>Insert PV Module</span>
             </a>
             <div class="pvmod-allign">
-              <img class="pvmod" src="./images/pvmod01.jpg" />
+              <img class="pvmod5" src="./images/pvmod01.jpg" />
+              <img class="pvmod5" src="./images/pvmod01.jpg" />
+              <img class="pvmod5" src="./images/pvmod01.jpg" />
             </div>
             <meter class="meter" id="m5" min="0" max="100" value="100"></meter>
-            <div class="consumptionInfo"><span id="consumptionPercent">100</span><span>% Grid Consumption</span></div>
+            <div class="consumptionInfo"><span id="consumptionPercent5">100</span><span>% Grid Consumption</span></div>
           </div>
 
           <div class="inserting pvarea6">
-            <a href="#" id="btn6">
+            <a id="btn6">
               <span class="btn6">Insert PV Module</span>
               <span>Insert PV Module</span>
             </a>
             <div class="pvmod-allign">
-            <img class="pvmod" src="./images/pvmod01.jpg" />
+            <img class="pvmod6" src="./images/pvmod01.jpg" />
+            <img class="pvmod6" src="./images/pvmod01.jpg" />
             </div>
             <meter class="meter" id="m6" min="0" max="100" value="100"></meter>
-            <div class="consumptionInfo"><span id="consumptionPercent">100</span><span>% Grid Consumption</span></div>
+            <div class="consumptionInfo"><span id="consumptionPercent6">100</span><span>% Grid Consumption</span></div>
           </div>
 
         </div>
@@ -116,10 +128,14 @@
       </div>
     </p>
     <p>
-      <div class="endgame">
+      <div id="endgame" class="endgame">
         <h2>Game Over</h2>
-        <h3>Total Energy Saved: <span class="bold">X</span> % </h3>
+        <h3>Total Energy Saved: <span id="energySaved" class="bold"></span></h3>
       </div> 
+
+    <div>
+       <button onClick="window.location.reload();" class="btnRestart">Restart Game</button>
+    </div>
     </p>
   </div>
   <script src="/assets/script/index.js"></script>

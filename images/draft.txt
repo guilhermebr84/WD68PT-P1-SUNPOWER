@@ -1,0 +1,11 @@
+function handleInsertBtn(pvmodList, countPVMod) {
+  // const pvModImage = document.createElement("img");
+  // pvModImage.src = "./images/pvmod01.jpg";
+  // const classImage = document.getElementsByClassName("pvmod-allign1");
+  // console.log(classImage);
+  // classImage.innerHTML = pvModImage;
+  //  for (let i = 0; i < pvQt; i ++ ) {  }
+
+  pvmodList[countPVMod].style.display = "inline";
+  console.log((pvmodList[countPVMod].style.display = "inline"));
+}

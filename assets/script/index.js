@@ -1,8 +1,5 @@
 // os objetos da vida real inseridos aqui
 // predios, casas, modulos fotovoltaicos, sol, raios de sol, relogio de consumo (vermelho consumo, verde geração)
-console.log("index.js tá rodando");
-
-// const game = new Game()
 
 const btn1 = document.getElementById("btn1");
 const btn2 = document.getElementById("btn2");
@@ -40,30 +37,43 @@ const pvQt5 = 3; //pvModulePower2 = 200;
 const pvQt6 = 2; //pvModulePower2 = 200;
 
 let countPVMod1 = -1;
+let countPVMod2 = -1;
+let countPVMod3 = -1;
+let countPVMod4 = -1;
+let countPVMod5 = -1;
+let countPVMod6 = -1;
+
+let countClick1 = -1;
+let countClick2 = -1;
+let countClick3 = -1;
+let countClick4 = -1;
+let countClick5 = -1;
+let countClick6 = -1;
 
 let consumptionPercent1 = document.getElementById("consumptionPercent1");
-console.log(consumptionPercent1);
+let consumptionPercent2 = document.getElementById("consumptionPercent2");
+let consumptionPercent3 = document.getElementById("consumptionPercent3");
+let consumptionPercent4 = document.getElementById("consumptionPercent4");
+let consumptionPercent5 = document.getElementById("consumptionPercent5");
+let consumptionPercent6 = document.getElementById("consumptionPercent6");
 
 const pvmodList1 = document.querySelectorAll(".pvmod1");
+const pvmodList2 = document.querySelectorAll(".pvmod2");
+const pvmodList3 = document.querySelectorAll(".pvmod3");
+const pvmodList4 = document.querySelectorAll(".pvmod4");
+const pvmodList5 = document.querySelectorAll(".pvmod5");
+const pvmodList6 = document.querySelectorAll(".pvmod6");
 
-console.log(meter1);
+const engGameMessage = document.getElementById("endgame");
+let energySaved = document.getElementById("energySaved");
 
-// retirar os ids do pvmod no index.html
 function handleInsertBtn(pvmodList, countPVMod) {
-  // const pvModImage = document.createElement("img");
-  // pvModImage.src = "./images/pvmod01.jpg";
-  // const classImage = document.getElementsByClassName("pvmod-allign1");
-  // console.log(classImage);
-  // classImage.innerHTML = pvModImage;
-  //  for (let i = 0; i < pvQt; i ++ ) {  }
-
   pvmodList[countPVMod].style.display = "inline";
-  console.log((pvmodList[countPVMod].style.display = "inline"));
 }
 
 function meterDec(meter, pvQt, consumptionPercent) {
   let meterDecrease = 100 / pvQt;
-  meter.value = meter.value - meterDecrease;
+  meter.value = (meter.value - meterDecrease).toFixed(0);
   consumptionPercent.innerText = meter.value;
 }
 
@@ -77,30 +87,89 @@ btn1.addEventListener("click", () => {
     handleInsertBtn(pvmodList1, countPVMod1);
     meterDec(meter1, pvQt1, consumptionPercent1);
   } else {
-    window.alert("Number of Mods reach the max");
+    window.alert("Number of Mods reach the max for roof size");
   }
 });
 
 btn2.addEventListener("click", () => {
-  handleInsertBtn();
+  countPVMod2++;
+  if (countPVMod2 < pvQt2) {
+    handleInsertBtn(pvmodList2, countPVMod2);
+    meterDec(meter2, pvQt2, consumptionPercent2);
+    console.log(meter2.value);
+  } else {
+    window.alert("Number of Mods reach the max for roof size");
+  }
 });
 
 btn3.addEventListener("click", () => {
-  handleInsertBtn();
+  countPVMod3++;
+  if (countPVMod3 < pvQt3) {
+    handleInsertBtn(pvmodList3, countPVMod3);
+    meterDec(meter3, pvQt3, consumptionPercent3);
+    console.log(meter3.value);
+  } else {
+    window.alert("Number of Mods reach the max for roof size");
+  }
 });
 
 btn4.addEventListener("click", () => {
-  handleInsertBtn();
+  countPVMod4++;
+  if (countPVMod4 < pvQt4) {
+    handleInsertBtn(pvmodList4, countPVMod4);
+    meterDec(meter4, pvQt4, consumptionPercent4);
+    console.log(meter4.value);
+  } else {
+    window.alert("Number of Mods reach the max for roof size");
+  }
 });
 
 btn5.addEventListener("click", () => {
-  console.log("botão 5");
-  handleInsertBtn();
+  countPVMod5++;
+  if (countPVMod5 < pvQt5) {
+    handleInsertBtn(pvmodList5, countPVMod5);
+    meterDec(meter5, pvQt5, consumptionPercent5);
+    console.log(meter5.value);
+  } else {
+    window.alert("Number of Mods reach the max for roof size");
+  }
 });
 
 btn6.addEventListener("click", () => {
-  console.log("botão 6");
-  handleInsertBtn();
+  countPVMod6++;
+  if (countPVMod6 < pvQt6) {
+    handleInsertBtn(pvmodList6, countPVMod6);
+    meterDec(meter6, pvQt6, consumptionPercent6);
+    console.log(meter6.value);
+  } else {
+    window.alert("Number of Mods reach the max for roof size");
+  }
 });
 
-function updateSavingInformation() {}
+console.log(meter1.value);
+
+function gameOver() {
+  if (
+    meter1.value < 2 &&
+    meter2.value < 2 &&
+    meter3.value < 2 &&
+    meter4.value < 2 &&
+    meter5.value < 2 &&
+    meter6.value < 2
+  ) {
+    let totalEnergySaved = `${
+      pvQt1 * pvModulePower1 +
+      pvQt2 * pvModulePower1 +
+      pvQt3 * pvModulePower1 +
+      pvQt4 * pvModulePower2 +
+      pvQt5 * pvModulePower2 +
+      pvQt6 * pvModulePower2
+    } kWh.month`;
+    engGameMessage.style.display = "inline";
+    energySaved.innerText = totalEnergySaved;
+  } else {
+    window.alert("Keep Playing!");
+  }
+}
+
+gameOver();

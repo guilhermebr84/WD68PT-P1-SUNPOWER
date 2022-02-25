@@ -136,8 +136,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.pvmod1,
-.pvmod {
+.pvmod1, .pvmod2, .pvmod3, .pvmod4,.pvmod5, .pvmod6, .pvmod {
   width: 25px;
   height: auto;
   border: 1px solid black;
@@ -204,7 +203,7 @@ body {
 
 .pvmod-allign {
   align-items: flex-end;
-  margin-left: 70px;
+  margin-left: 50px;
 }
 
 .meter {
@@ -244,6 +243,10 @@ body {
   margin-bottom: 10px;
 }
 
+.btnRestart{
+  margin-bottom: 10px;
+}
+
 .consumptionInfo {
   width: 100%;
   text-align: center;
@@ -257,4 +260,8 @@ body {
 
 .bold {
   font-weight: bolder;
+}
+
+.endgame {
+  display: none;
 }
