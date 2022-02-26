@@ -9,6 +9,6 @@ My name´s Guilherme Rosa, a graduated and post graduated Health, Safety and Env
 The game´s intention is show how photovoltaic solar systems can be effective to reduce the energy bills in any kind of building or house.
 
 ## Link
-[PRESENTATION](https://drive.google.com/file/d/1ojgxfROFbLTQl1huZ4UcJocBQTtLYpUh/view?usp=sharing)
+[PRESENTATION](https://drive.google.com/file/d/19E6SWrTF8hgycV3vWPxntVLCCJ_SThB2/view?usp=sharing)
 
 [GHPAGES](https://guilhermebr84.github.io/wd68pt-p1-sunpower/)
